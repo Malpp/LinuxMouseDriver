@@ -1,0 +1,19 @@
+idVendor = 0x045e
+idProduct = 0x0084
+
+4 bytes:
+1 2 3 4
+
+1: Button click byte
+   Left click = 1
+   Right click = 2
+   Middle click = 4
+
+2: X diff
+   -127 to 127 (int)
+
+3: Y diff
+   -127 to 127 (int)
+
+4: Scroll Wheel diff
+   -1 to 1 (int)
