@@ -79,11 +79,14 @@ static void usb_mouse_irq( struct urb *urb )
 
 
 
-	for (int i = 0; i < 4; i++)
-	{
-		printk( KERN_INFO "%d", data[i] );
-		printk( KERN_INFO " " );
-	}
+	printk( KERN_INFO "%d", data[0] );
+	printk( KERN_INFO " " );	
+	printk( KERN_INFO "%d", data[1] );
+	printk( KERN_INFO " " );	
+	printk( KERN_INFO "%d", data[2] );
+	printk( KERN_INFO " " );	
+	printk( KERN_INFO "%d", data[3] );
+	printk( KERN_INFO " " );
 
 	printk( KERN_INFO "\n" );
 
