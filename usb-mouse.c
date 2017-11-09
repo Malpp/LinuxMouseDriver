@@ -99,6 +99,9 @@ resubmit:
 
 static int usb_mouse_open( struct input_dev *dev )
 {
+
+	printk( KERN_INFO "Mouse open removed\n" );
+
 	struct usb_mouse *mouse = input_get_drvdata( dev );
 
 	mouse->irq->dev = mouse->usbdev;
@@ -215,6 +218,9 @@ fail1:
 
 static void usb_mouse_disconnect( struct usb_interface *intf )
 {
+
+	printk( KERN_INFO "Mouse drive removed\n" );
+
 	struct usb_mouse *mouse = usb_get_intfdata( intf );
 
 	usb_set_intfdata( intf, NULL );
