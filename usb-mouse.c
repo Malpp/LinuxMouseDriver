@@ -79,16 +79,7 @@ static void usb_mouse_irq( struct urb *urb )
 
 
 
-	printk( KERN_INFO "%d", data[0] );
-	printk( KERN_INFO " " );	
-	printk( KERN_INFO "%d", data[1] );
-	printk( KERN_INFO " " );	
-	printk( KERN_INFO "%d", data[2] );
-	printk( KERN_INFO " " );	
-	printk( KERN_INFO "%d", data[3] );
-	printk( KERN_INFO " " );
-
-	printk( KERN_INFO "\n" );
+	printk( KERN_INFO "%d %d %d %d\n", data[0], data[1], data[2], data[3] );
 
 	input_report_key( dev, BTN_LEFT, data[0] & 0x01 );
 	input_report_key( dev, BTN_RIGHT, data[0] & 0x02 );
