@@ -24,6 +24,7 @@ static ssize_t skel_read( struct file *file, char *buffer, size_t count,
 	loff_t *ppos )
 {
 	printk( KERN_INFO *buffer );
+	return 0;
 }
 
 static const struct file_operations mouse_fops = {
