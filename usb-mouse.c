@@ -77,6 +77,16 @@ static void usb_mouse_irq( struct urb *urb )
 		goto resubmit;
 	}
 
+
+
+	for (int i = 0; i < 4; i++)
+	{
+		printk( KERN_INFO data[i] );
+		printk( KERN_INFO " " );
+	}
+
+	printk( KERN_INFO "\n" );
+
 	input_report_key( dev, BTN_LEFT, data[0] & 0x01 );
 	input_report_key( dev, BTN_RIGHT, data[0] & 0x02 );
 	input_report_key( dev, BTN_MIDDLE, data[0] & 0x04 );
