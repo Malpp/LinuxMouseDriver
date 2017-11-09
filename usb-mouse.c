@@ -23,7 +23,7 @@ MODULE_DEVICE_TABLE (usb, mouse_table);
 static ssize_t skel_read( struct file *file, char *buffer, size_t count,
 	loff_t *ppos )
 {
-	printk( KERN_INFO *buffer );
+	printk( KERN_INFO "Pen drive (%04X) plugged\n", buffer );
 	return 0;
 }
 
