@@ -36,6 +36,7 @@ static struct usb_driver mouse_driver =
     .name = "mouse_driver",
     .id_table = mouse_table,
     .probe = mouse_probe,
+	.fops = &mouse_fops,
     .disconnect = mouse_disconnect,
 };
  
